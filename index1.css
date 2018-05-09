@@ -1,0 +1,86 @@
+* { box-sizing: border-box;}
+
+.ground {
+  animation: move 10s steps(1000) infinite forwards;
+}
+
+.enemy {
+  animation: punch 3s steps(9) infinite forwards;
+}
+
+.hero {
+  animation: ko 3s steps(10) infinite forwards;
+}
+
+.small-cloud {
+  animation: slide-left 10s steps(100) infinite forwards;
+}
+
+.crowd {
+  animation: crowd1  infinite forwards,
+}
+
+@keyframes punch {
+  100% { background-position: -399px 0px; }
+}
+@keyframes ko {
+  100% { background-position: -483px 0px; }
+}
+
+@keyframes walk {
+  100% { margin-left: 1024px;  transform: scale(2);}
+}
+
+
+@keyframes slide-left {
+  100% { margin-right: 1024px; transform: scale(9);}
+}
+@keyframes crowd1 {
+  100% { margin-right: 1024px; transform: scale(9);}
+}
+
+@keyframes down-up {
+  50% { margin-top: 200px;}
+  100% { margin-top: 0px; }
+}
+
+.background {
+  width: 1400px;
+  height: 680px;
+  background-image: url("images/ring.jpg");
+  position: relative;
+  border: thin solid black;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: skyblue;
+  margin: 0 auto;
+
+}
+
+.enemy {
+  background-image: url("images/punch-yellow.png");
+  width: 44.33333px;
+  height: 64px;
+  position: absolute;
+  bottom: 113px;
+  margin-left: 500px;
+  transform: scale(5);
+}
+.hero {
+  background-image: url("images/ko-yellow2.png");
+  width: 40.3px;
+  height: 64px;
+  position: absolute;
+  bottom: 113px;
+  margin-left: 700px;
+  transform: scale(5);
+}
+
+.small-cloud {
+  background-image: url("images/cloud_PNG16.png");
+  width: 800px;
+  height: 519px;
+  top: 0;
+  left: 0;
+}
